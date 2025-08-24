@@ -1,6 +1,18 @@
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+import pyfiglet
+import os
+
+# ================= Banner Function =================
+def banner():
+    os.system("clear")
+    ascii_banner = pyfiglet.figlet_format("ZeroGap")
+    print("\033[1;32m" + ascii_banner + "\033[0m")
+    print("\033[1;34m" + "="*50 + "\033[0m")
+    print("\033[1;36m   🔒 Vulnerability Scanner Tool - Created by Yuvraj Tyagi 🔒   \033[0m")
+    print("\033[1;34m" + "="*50 + "\033[0m\n")
+# ====================================================
 
 COMMON_PATHS = ["robots.txt", "admin/", "login/", "config/", "backup/", ".git/", "test/"]
 HEADERS = {"User-Agent": "Mozilla/5.0 (Scanner by You)"}
@@ -57,6 +69,8 @@ def check_site(url):
             if count >= 20:
                 break
 
+# ================= Main =================
 if __name__ == "__main__":
+    banner()  # Banner call added here
     target_url = input("Enter the website URL (with or without http): ").strip()
     check_site(target_url)
