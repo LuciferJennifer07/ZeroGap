@@ -12,3 +12,5 @@ ZeroGap is a Python-based vulnerability scanner tool that helps identify securit
 ```bash
 git clone https://github.com/LuciferJennifer07/ZeroGap.git
 cd ZeroGap
+python3 zerogap.py
+
