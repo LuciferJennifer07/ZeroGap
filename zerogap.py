@@ -7,6 +7,7 @@ import pyfiglet
 import os
 import sys
 import csv
+import random
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 
@@ -33,8 +34,16 @@ def show_banner(tool_name="ZeroGap"):
 # ============================================
 
 DEFAULT_PATHS = [
-    "robots.txt", "admin/", "login/", "config/", 
-    "backup/", ".git/", "test/"
+    "secret/", "hidden_admin/", "portal/login.php", "backup_data/", "old_config/", 
+    ".env", "test_area/", "private/", "uploads/", "dashboard/",
+    "config_backup/", "admin_panel/", "dev/", "staging/", "temp_files/",
+    "hidden_files/", "user_data/", "archive/", "logs/", "db_backup/",
+    "maintenance/", "site_backup/", "private_html/", "secure/", "hidden_zone/",
+    "config_old/", "admin_old/", "beta/", "experimental/", "sandbox/",
+    "restricted/", "internal/", "confidential/", "vault/", "secure_uploads/",
+    "login_area/", "settings/", "data_storage/", "files_backup/", "hidden_portal/",
+    "backup_old/", "temp_admin/", "system_logs/", "private_portal/", "hidden_dashboard/",
+    "secret_files/", "config_hidden/", "secure_zone/", "user_uploads/", "admin_area/"
 ]
 DEFAULT_HEADERS = {"User-Agent": "Mozilla/5.0 (Security Scanner)"}
 
@@ -241,3 +250,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
