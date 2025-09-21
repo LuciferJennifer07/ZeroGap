@@ -34,18 +34,41 @@ def show_banner(tool_name="ZeroGap"):
 # ============================================
 
 DEFAULT_PATHS = [
-    "secret/", "hidden_admin/", "portal/login.php", "backup_data/", "old_config/", 
-    ".env", "test_area/", "private/", "uploads/", "dashboard/",
-    "config_backup/", "admin_panel/", "dev/", "staging/", "temp_files/",
-    "hidden_files/", "user_data/", "archive/", "logs/", "db_backup/",
-    "maintenance/", "site_backup/", "private_html/", "secure/", "hidden_zone/",
-    "config_old/", "admin_old/", "beta/", "experimental/", "sandbox/",
-    "restricted/", "internal/", "confidential/", "vault/", "secure_uploads/",
-    "login_area/", "settings/", "data_storage/", "files_backup/", "hidden_portal/",
-    "backup_old/", "temp_admin/", "system_logs/", "private_portal/", "hidden_dashboard/",
-    "secret_files/", "config_hidden/", "secure_zone/", "user_uploads/", "admin_area/"
+    # Admin / Login panels
+    "admin_portal/", "hidden_login/", "superuser_panel/", "portal_admin/", "cms_admin/", 
+    "dashboard_admin/", "admin_area_old/", "backend_login/", "control_panel/", "internal_dashboard/",
+
+    # Backup / Old files
+    "backup_old_files/", "site_backup/", "db_backup/", "user_data_backup/", "archive_old/", 
+    "old_versions/", "staging_backup/", "temp_backup/", "old_site/", "previous_release/",
+
+    # Config / Env / Secrets
+    "cms_config/", "config/.env", "config_old/", "secret_keys/", "private_config/", 
+    "config_backup/", "env_files/", "settings_old/", "system_config/", "app_config/",
+
+    # Logs / Test / Dev
+    "system_logs/", "error_logs/", "test_environment/", "dev_console/", "staging_area/", 
+    "sandbox/", "beta_portal/", "debug/", "qa_env/", "test_panel/",
+
+    # Uploads / Files / Sensitive
+    "private_uploads/", "secure_uploads/", "restricted_files/", "confidential_docs/", "uploads_old/", 
+    "user_files/", "documents/", "media_backup/", "downloads/", "files_backup/",
+
+    # Misc / Hidden / Internal
+    "hidden_api/", "maintenance_mode/", "internal_tools/", "internal_docs/", "secret_area/", 
+    "hidden_zone/", "restricted_area/", "control_area/", "private_zone/", "hidden_panel/"
 ]
-DEFAULT_HEADERS = {"User-Agent": "Mozilla/5.0 (Security Scanner)"}
+
+DEFAULT_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+    "Cache-Control": "max-age=0",
+}
+
 
 
 def normalize_url(url):
@@ -250,4 +273,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
